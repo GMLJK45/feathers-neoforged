@@ -133,14 +133,7 @@ configurations {
 }
 
 dependencies {
-    // Overflowing Bars is an optional, client-side-only integration: FeathersHudOverlay references
-    // fuzs.overflowingbars.client.handler.RowCountRenderer, but only calls it when
-    // Feathers.OB_LOADED is true at runtime, so people without the mod installed must still be able
-    // to run Feathers normally.
-    //
-    // compileOnly makes the API visible to the compiler without bundling/publishing it as a
-    // dependency of your mod. localRuntime (defined below) adds the full jars to your dev
-    // environment only, so the integration actually works when you test it locally.
+
     compileOnly "maven.modrinth:XD7XOrAF:PYRrjTaY" // Overflowing Bars v21.1.1 (1.21.1, NeoForge)
     localRuntime "maven.modrinth:XD7XOrAF:PYRrjTaY"
     localRuntime "maven.modrinth:QAGBst4M:5A6wiMVf" // Puzzles Lib v21.1.17 (1.21.1, NeoForge) - Overflowing Bars' own dependency
